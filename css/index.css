@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+@font-face {
+    font-family: "SF"; 
+    src: url("../fonts/SFProText-Light.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+} 
+
+@font-face {
+    font-family: "TT"; 
+    src: url("../fonts/tt.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'SF';
+}
+  
+html {
+    scroll-behavior: smooth;
+}
+  
+*::selection {
+    background-color: black;
+    color: white;
+}
+  
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background: linear-gradient(to bottom right, #164384, #3475d1);
+    box-shadow: 0 0 10px 1px #3475d1;
+}
+  
+header .flare {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 35px;
+    transform: skewX(-45deg); 
+    animation: flareAnimation;
+    left: -150%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.4));
+    animation: flareAnimation 3s infinite linear; 
+}
+
+@keyframes flareAnimation {
+    0% {
+        left: -150%;
+    }
+    100% {
+        left: 150%;
+    }
+}
+
+.img-name {
+    height: 50px;
+    width: auto;
+    user-select: none;
+    border-radius: 5px;
+}
+
+.website-name {
+    display: flex;
+    gap: 10px;
+}
+
+.name {
+    font-family: "TT";
+    color: white;
+    user-select: none;
+}
+
+#one {
+    display: none;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.img-nav {
+    width: 32px;
+    height: 32px;
+}
+  
+.a {
+    position: relative;
+    font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    font-family: "TT";
+    user-select: none;
+}
+  
+.a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+  
+.a:hover::after {
+    transform: scaleX(1);
+}
+
+.login-head {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    border: none;
+    background: none;
+    font-family: "TT";
+    box-shadow: 0 0 0 2px white;
+    padding: 3px;
+    gap: 3px;
+    cursor: pointer;
+    transition: 0.3s;
+    color: white;
+}
+
+.login-head:hover {
+    background-color: white;
+    box-shadow: 0 0 0 2px white;
+    transition: 0.3s;
+    color: black;
+}
+
+.line-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 7px;
+    margin-top: 100px;
+}
+
+#start-line {
+    margin-top: 150px;
+}
+
+.line {
+    width: 20%;
+    height: 5px;
+    background-color: black;
+    border-radius: 5px;
+}
+
+.section-name {
+    color: black;
+    font-family: "TT";
+    font-size: 30px;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    gap: 250px;
+    flex-wrap: wrap;
+}
+
+.about-us-cont {
+    text-align: center;
+    width: 270px;
+    margin-top: 30px;
+    background-color: #f0f6ff;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.header-as {
+    font-family: "TT";
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.smile {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.about-us-text {
+    font-weight: 600;
+}
+
+.new-photos {
+    margin-top: 30px;
+}
+
+.new-photo {
+    width: 100%;
+    text-align: center;
+    background-color: #f0f6ff;
+}
+
+.transport-color {
+    width: 10px;
+    height: auto;
+}
+
+#tram {
+    background-color: #a70a0a;
+}
+
+#troll {
+    background-color: #164384;
+}
+
+#bus {
+    background-color: #228B22;
+}
+
+#ebus {
+    background-color: #F4A900;
+}
+
+#metro {
+    background-color: #29AB87;
+}
+
+#p6 {
+    background-color: #53377A;
+}
+
+#p7 {
+    background-color: #4285B4;
+}
+
+#water {
+    background-color: #6495ED;
+}
+
+#air {
+    background-color: #6B8E23;
+}
+
+#rzd {
+    background-color: gray;
+}
+
+.transport-cont {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.transport-name {
+    font-family: "TT";
+}
+
+#tram-cont:hover {
+    background-color: #a70a0a;
+    color: white;
+    transition: 0.3s;
+}
+
+#troll-cont:hover {
+    background-color: #164384;
+    color: white;
+    transition: 0.3s;
+}
+
+#bus-cont:hover {
+    background-color: #228B22;
+    color: white;
+    transition: 0.3s;
+}
+
+#ebus-cont:hover {
+    background-color: #F4A900;
+    color: white;
+    transition: 0.3s;
+}
+
+#metro-cont:hover {
+    background-color: #29AB87;
+    color: white;
+    transition: 0.3s;
+}
+
+#p6-cont:hover {
+    background-color: #53377A;
+    color: white;
+    transition: 0.3s;
+}
+
+#p7-cont:hover {
+    background-color: #4285B4;
+    color: white;
+    transition: 0.3s;
+}
+
+#water-cont:hover {
+    background-color: #6495ED;
+    color: white;
+    transition: 0.3s;
+}
+
+#air-cont:hover {
+    background-color: #6B8E23;
+    color: white;
+    transition: 0.3s;
+}
+
+#rzd-cont:hover {
+    background-color: gray;
+    color: white;
+    transition: 0.3s;
+}
+
+footer {
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+    background: linear-gradient(to bottom right, #164384, #3475d1);
+    box-shadow: 0 0 10px 1px #3475d1;
+    margin-top: 5px;
+}
+
+.footer-head {
+    color: white;
+    font-family: "TT";
+}
+
+#link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#media {
+    display: none;
+}
+
+@media (max-width: 1360px) {
+    #full {
+        display: none;
+    }
+
+    #one {
+        display: block;
+    }
+
+    .about-us {
+        gap: 150px;
+    }
+
+    .section-name {
+        font-size: 25px;
+    }
+
+    .header-as {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .about-us {
+        gap: 100px;
+    }
+
+    .section-name {
+        text-align: center;
+    }
+
+    #full-one {
+        display: none;
+    }
+
+    #media {
+        display: block;
+    }
+}
+
+@media (max-width: 670px) {
+    #one {
+        display: none;
+    }
+
+    header {
+        padding: 10px 80px;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    .footer-head {
+        display: none;
+    }
+
+    footer {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .website-name {
+        display: none;
+    }
+}
